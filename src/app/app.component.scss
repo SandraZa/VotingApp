@@ -1,0 +1,116 @@
+h1 {
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+.voting-container {
+  padding: 30px;
+  position: relative;
+}
+
+.voting-zone-container {
+  border: 3px solid #000000;
+  border-radius: 6px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+  button {
+    display: block;
+    width: 100px;
+    float: right;
+  }
+}
+
+.user-table {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #000000;
+  border-top: 0;
+  p {
+    padding: 10px 0 0 20px;
+    font-weight: bold;
+  }
+}
+
+.data-container {
+  padding: 0;
+  margin-bottom: 30px;
+  border-bottom: 0;
+  .add-data-container {
+    padding: 0 24px;
+    overflow: hidden;
+    border: 1px solid #000000;
+    border-bottom: 0;
+    h2 {
+      float: left;
+      margin: 0;
+      padding: 8px 0;
+    }
+    .add-button {
+      float: right;
+      margin-top: 10px;
+    }
+  }
+  table {
+    border-top: 1px solid #000000;
+    width: 100%;
+    td,
+    th {
+      &:first-child {
+        border-left: 0;
+      }
+      padding-left: 24px;
+      border-left: 1px solid #000000;
+    }
+    tr {
+      background-color: #ffffff;
+      &:nth-child(2n) {
+        background-color: #e8e8e8;
+      }
+    }
+    th {
+      background-color: #2980b9;
+      color: #ffffff;
+    }
+    td.voted-area {
+      font-weight: bold;
+      &.voted {
+        color: #27d632;
+      }
+      &.notVoted {
+        color: #ff1b10;
+      }
+    }
+  }
+}
+
+.add-button {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  padding: 0;
+  border: 2px solid #2980b9;
+  border-radius: 22px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 22px;
+  text-align: center;
+  color: #2980b9;
+  vertical-align: middle;
+  &:hover {
+    border-color: lighten(#2980b9, 20);
+    color: lighten(#2980b9, 20);
+  }
+  span {
+    display: inline-block;
+    height: 100%;
+  }
+}
+
+.reset-container {
+  float: right;
+  button {
+    margin-left: 20px;
+  }
+}

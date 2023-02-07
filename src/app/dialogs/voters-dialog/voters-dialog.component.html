@@ -1,0 +1,29 @@
+<form #addVoterForm="ngForm">
+  <h1 mat-dialog-title>Add Voter</h1>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Voter name</mat-label>
+      <input
+        matInput
+        maxlength="20"
+        (change)="checkVoter($event)"
+        name="voterName"
+        [(ngModel)]="data.name"
+        required
+      />
+    </mat-form-field>
+    <p *ngIf="isError">This name already exist.</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button (click)="cancel(addVoterForm)">Cancel</button>
+    <button
+      [disabled]="!addVoterForm.valid || isError"
+      mat-raised-button
+      color="primary"
+      type="button"
+      [mat-dialog-close]="data.name"
+    >
+      Add
+    </button>
+  </div>
+</form>
